@@ -112,14 +112,18 @@ function checkingScore () {
     if(confirm('Monster is winner, new game?')) {
       starting()
     } else {
-      giveUp()
+      // giveUp()
+      starting()
+
       hideBtnAttacks()
     }
   } else if (pvM <= 0) {
     if(confirm('You is winner, new game?')) {
       starting()
     } else {
-      giveUp()
+      // giveUp()
+      starting()
+
       hideBtnAttacks()
     }
   }
