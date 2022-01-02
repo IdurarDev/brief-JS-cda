@@ -15,7 +15,7 @@ let pvM = 100;
 percentY.innerHTML = pvY;
 percentM.innerHTML = pvM;
 
-console.log('percentM:', percentM)
+
 
 let attackMonster = Math.floor(Math.random() * ((10 - 5) + 1) + 5);
 let attackMy = Math.floor(Math.random() * ((10 - 3) + 1) + 3);
@@ -46,11 +46,11 @@ function attack () {
   my.value -= attackMonster;
   pvY -= attackMonster;
   percentY.innerHTML = pvY;
-  console.log('percentM:', percentM)
+
   monster.value -= attackMy;
   pvM -= attackMy;
   percentM.innerHTML = pvM;
-  console.log('percentY:', percentY)
+
 
   checkingScore()
 
@@ -59,14 +59,14 @@ function attack () {
 punch.addEventListener('click', attack)
 
 function specialAttack () {
+
   my.value -= attackMonster;
   pvY -= attackMonster;
   percentY.innerHTML = pvY;
-  console.log('percentM:', percentM)
+
   monster.value -= specialMy;
   pvM -= specialMy;
   percentM.innerHTML = pvM;
-  console.log('percentY:', percentY)
 
   checkingScore()
 
@@ -82,8 +82,6 @@ function heal () {
   }
   pvY -= attackMonster;
   pvM;
-  console.log('attackMonster:', attackMonster)
-  console.log('pvY:', pvY)
   percentY.innerHTML = pvY;
   my.value = pvY;
 
@@ -113,7 +111,6 @@ function checkingScore () {
   if (pvY <= 0) {
     if(confirm('Monster is winner, new game?')) {
       starting()
-      // giveUp()
     } else {
       giveUp()
       hideBtnAttacks()
@@ -121,16 +118,9 @@ function checkingScore () {
   } else if (pvM <= 0) {
     if(confirm('You is winner, new game?')) {
       starting()
-      // giveUp()
     } else {
       giveUp()
       hideBtnAttacks()
     }
   }
 }
-
-// if (my.value > monster.value) {
-//   alert(`${you} is Winner`)
-// } else {
-//   alert(`${monster} is Winner`)
-// }
