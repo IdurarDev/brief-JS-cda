@@ -26,24 +26,34 @@
 <body>
 
   <h1>Monster Slayer</h1>
-  <section>
-    <label for="you">you</label>
-    <progress class="attackYou" id="you" value="100" max="100">100 %</progress>
+  <section class="containerOne">
+    <section class="players">
+      <label for="you">you</label>
+      <progress id="you" value="100" max="100"><span>100 %</span></progress>
+    </section>
+    <section class="players">
+      <label for="monster">monster</label>
+      <progress id="monster" value="100" max="100"><span>100 %</span></progress>
+    </section>
   </section>
+  
   <section>
-    <label for="monster">monster</label>
-    <progress class="attackMonster" id="monster" value="100" max="100">100 %</progress>
+    <section class="startGame">
+      <div class="btn-start">
+        <input class="starting" type="button" value="start new game">
+      </div>
+      <div class="btn-attack">
+        <input class="attack-red punch" type="button" value="attack">
+        <input class="attack-orange specialPunch" type="button" value="special attack">
+        <input class="starting health" type="button" value="heal">
+        <input class="attack-blanc stop" type="button" value="give up">
+      </div>
+    </section>
+    <section>
+      <ul class="results"></ul>
+    </section>
   </section>
-  <section>
-    <div>
-      <input type="button" value="start new game">
-    </div>
-  </section>
-  <section>
-    <ul class="results">
-
-    </ul>
-  </section>
+  
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
