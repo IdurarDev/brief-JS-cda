@@ -113,7 +113,6 @@ function checkingScore () {
       starting()
       hideBtnAttacks()
     } else {
-      // giveUp()
       starting()
 
       hideBtnAttacks()
