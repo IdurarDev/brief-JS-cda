@@ -20,9 +20,6 @@ progress {
   background-color: green;
 }
 
-progress span {
-  color: black;
-}
 .containerOne {
   max-width: 800px;
   margin: 0 auto;
@@ -56,6 +53,7 @@ input.attack-red {
   border: none;
   cursor: pointer;
 }
+
 input.attack-orange {
   margin: 3%;
   padding: 0.5rem;
@@ -64,6 +62,7 @@ input.attack-orange {
   border: none;
   cursor: pointer;
 }
+
 input.attack-blanc {
   margin: 3%;
   padding: 0.5rem;
