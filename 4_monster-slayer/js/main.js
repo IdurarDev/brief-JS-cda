@@ -17,10 +17,14 @@ percentM.innerHTML = pvM;
 
 
 
-let attackMonster = Math.floor(Math.random() * ((10 - 5) + 1) + 5);
-let attackMy = Math.floor(Math.random() * ((10 - 3) + 1) + 3);
-let specialMy = Math.floor(Math.random() * ((20 - 10) + 1) + 10);
+// let attackMonster = Math.floor(Math.random() * ((10 - 5) + 1) + 5);
+// console.log('attackMonster:', attackMonster)
+// let attackMy = Math.floor(Math.random() * ((10 - 3) + 1) + 3);
+// let specialMy = Math.floor(Math.random() * ((20 - 10) + 1) + 10);
 
+function attackMonster () {
+  return Math.floor(Math.random() * ((10 - 5) + 1) + 5);
+}
 
 function hideBtnAttacks () {
   btnStart.hidden = false;
@@ -43,14 +47,13 @@ function starting () {
 btnStart.addEventListener('click', starting)
 
 function attack () {
-  my.value -= attackMonster;
-  pvY -= attackMonster;
+  my.value -= attackMonster();
+  pvY -= attackMonster();
   percentY.innerHTML = pvY;
-
+  let attackMy = Math.floor(Math.random() * ((10 - 3) + 1) + 3);
   monster.value -= attackMy;
   pvM -= attackMy;
   percentM.innerHTML = pvM;
-
 
   checkingScore()
 
@@ -60,10 +63,10 @@ punch.addEventListener('click', attack)
 
 function specialAttack () {
 
-  my.value -= attackMonster;
-  pvY -= attackMonster;
+  my.value -= attackMonster();
+  pvY -= attackMonster();
   percentY.innerHTML = pvY;
-
+  let specialMy = Math.floor(Math.random() * ((20 - 10) + 1) + 10);
   monster.value -= specialMy;
   pvM -= specialMy;
   percentM.innerHTML = pvM;
@@ -80,7 +83,7 @@ function heal () {
   } else {
     pvY += 10;
   }
-  pvY -= attackMonster;
+  pvY -= attackMonster();
   pvM;
   percentY.innerHTML = pvY;
   my.value = pvY;
